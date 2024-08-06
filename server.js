@@ -27,6 +27,7 @@ app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
   
 }))
+
 app.use('/reg', createUser);
  app.use('/postmsg',verifyjwt,postMessage);
 app.use('/likemsg',verifyjwt,likeMessage)

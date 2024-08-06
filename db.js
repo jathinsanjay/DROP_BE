@@ -4,7 +4,7 @@ const {DB}=require("./constants.js")
 const connectDB=async()=>{
     try{
         console.log(process.env.MONGO_URI)
-        const connectionInstance=await mongoose.connect(`mongodb://localhost:27017/${DB}`)
+        const connectionInstance=await mongoose.connect(`mongodb://localhost:27017/${DB}`, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("DB connected to Connection",connectionInstance.connection.host)
 
     }
